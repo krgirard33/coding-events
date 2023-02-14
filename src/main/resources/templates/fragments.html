@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<!-- Navigation header -->
 <nav th:fragment="header">
     <h1 th:text="${title}">Coding Events</h1>
     <ul class="nav">
@@ -15,6 +15,9 @@
         <li class="nav-item"><a class="nav-link" href="/events/create">Create Event</a></li>
     </ul>
 </nav>
+
+<!-- Address -->
+<td th:fragment="address">1234 5th Street</td>
 
 </body>
 </html>
