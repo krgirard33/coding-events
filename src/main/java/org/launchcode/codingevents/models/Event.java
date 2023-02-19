@@ -7,17 +7,19 @@ import jakarta.validation.constraints.Size;
 import java.util.Objects;
 public class Event {
 
-    private final int id;
+    private int id;
     private static int nextId = 1;
-    @Size(min = 3, max = 50, message = "Name must be between 3-50 characters")
-    @NotBlank
-    private String name;
 
-    @Email(message = "Invalid email. Try again.")
-    private String contactEmail;
+    @NotBlank(message = "Name is required.")
+    @Size(min = 3, max = 50, message = "Name must be between 3-50 characters")
+    private String name;
 
     @Size(max = 500, message = "Description to long.")
     private String description;
+
+    @NotBlank(message="Email required.")
+    @Email(message = "Invalid email. Try again.")
+    private String contactEmail;
 
     public Event(String name, String description, String contactEmail) {
         this.name = name;
@@ -26,6 +28,8 @@ public class Event {
         this.id = nextId;
         nextId++;
     }
+
+    public Event() { }
 
     public String getName() {
         return name;
