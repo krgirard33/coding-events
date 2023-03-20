@@ -21,7 +21,7 @@ public class Event extends AbstractEntity {
     private EventCategory eventCategory;
 
     @ManyToMany
-    private final List<Tag> tags = new ArrayList<>();
+    private List<Tag> tags = new ArrayList<>();
 
     public Event(String name, EventCategory eventCategory) {
         this.name = name;
