@@ -8,7 +8,7 @@ public class LoginFormDTO {
 
     @NotNull
     @NotBlank
-    @Size(min =3, max = 20, message = "Invalid password. Musername. Must be between 3 and 20 characters.")
+    @Size(min =3, max = 20, message = "Invalid password. Must be between 3 and 20 characters.")
     private String username;
 
     @NotNull
@@ -17,12 +17,14 @@ public class LoginFormDTO {
     private String password;
 
     public String getUsername() {
+
         return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
     }
+
 
     public String getPassword() {
         return password;
